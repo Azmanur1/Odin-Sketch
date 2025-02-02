@@ -23,3 +23,20 @@ button{
     font-size: 16px;
     cursor: pointer;
 }
+
+input{
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.square{
+    background-color: white;
+    border: 1px solid rgb(217, 211, 211);
+    box-sizing: border-box;
+}
+
+.hovered{
+    /* background-color: black !important;  */
+    background-color: black; 
+}
