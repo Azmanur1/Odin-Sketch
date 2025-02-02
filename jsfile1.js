@@ -37,8 +37,6 @@ function reset()
 {
     document.querySelectorAll(".hovered").forEach(item => {
         item.style.backgroundColor = 'white';
-        console.log(item.style.backgroundColor)
-        //item.classList.remove("hovered");
     });
 }
 
