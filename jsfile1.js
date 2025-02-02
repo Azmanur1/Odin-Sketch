@@ -1,6 +1,6 @@
 
-
-
+let sideOfSquare = 640; 
+let divColor = 'black';
 
 function generateGrid()
 {
@@ -14,7 +14,7 @@ function generateGrid()
 
     const container = document.getElementById("gridContainer");
     container.innerHTML = '';
-    const squareSize = 960/size+'px';
+    const squareSize = sideOfSquare/size+'px';
     console.log(squareSize);
     for(let i=0;i<size*size;i++){
         const square = document.createElement('div');
@@ -23,16 +23,11 @@ function generateGrid()
         square.style.height = squareSize;
         
         square.addEventListener("mouseover", () => {
-            if(square.classList.contains(".hovered")){
-                square.classList.remove("hovered")
-            }
-            else{
+            square.style.backgroundColor = divColor;   
+            if(!(square.classList.contains(".hovered"))){
                 square.classList.add("hovered");
-            }
-            
-            
+            }    
         });
-
         container.appendChild(square);
         
     }
@@ -41,6 +36,26 @@ function generateGrid()
 function reset() 
 {
     document.querySelectorAll(".hovered").forEach(item => {
-        item.classList.remove("hovered");
+        item.style.backgroundColor = 'white';
+        console.log(item.style.backgroundColor)
+        //item.classList.remove("hovered");
     });
 }
+
+function eraseGrid(){
+    divColor = 'white';
+}
+
+function draw(){
+    divColor = 'black';
+}
+
+
+  // square.addEventListener("mouseover", () => {
+        //     if(square.classList.contains(".hovered")){
+        //         square.classList.remove("hovered")
+        //     }
+        //     else{
+        //         square.classList.add("hovered");
+        //     }           
+        // });

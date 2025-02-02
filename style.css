@@ -1,3 +1,8 @@
+:root{
+    --bg-color: black;
+    --square-side: 640px;
+}
+
 body{
     display: size;
     margin:0;
@@ -12,8 +17,8 @@ body{
 .container{
     display: flex;
     flex-wrap: wrap;
-    width: 960px;
-    height: 960px;
+    width: var(--square-side);
+    height: var(--square-side);
     border: 2px solid black;
 }
 
@@ -35,8 +40,7 @@ input{
     border: 1px solid rgb(217, 211, 211);
     box-sizing: border-box;
 }
-
+/* background-color: black !important;  */
 .hovered{
-    /* background-color: black !important;  */
-    background-color: black; 
+    /* background-color: var(--bg-color); */
 }
